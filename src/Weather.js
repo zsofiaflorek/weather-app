@@ -1,6 +1,8 @@
 import {useState, useEffect} from "react";
+import { WeatherDisplay } from './WeatherDisplay';
 
 export const Weather = () => {
+    const [data, setData] = useState(undefined)
 
     useEffect(() => {
         fetch('https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/615702')
@@ -11,11 +13,12 @@ export const Weather = () => {
             .then(serverData => {
                 setData(serverData);
             });
-    }, [])
-    const [data, setData] = useState(undefined)
+    }, []);
+
     if (data === undefined){
         return (<div>Loading</div>)
     }
-    return <div>{data.consolidated_weather[0].weather_state_name}</div>
+
+    return <WeatherDisplay weather={data} />;
 
 };
