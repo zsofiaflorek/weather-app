@@ -1,8 +1,15 @@
 .summaryPanel {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     background-color: #1E213A ;
     width: 100%;
     min-height: 100vh;
     color: #88869D;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 .summaryPanel .temperature{
@@ -15,4 +22,7 @@ small{
 }
 .weatherLabel {
     font-size: 36px;
+}
+.summaryPanel img {
+    width: 150px;
 }
