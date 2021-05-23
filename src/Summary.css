@@ -1,0 +1,18 @@
+.summaryPanel {
+    background-color: #1E213A ;
+    width: 100%;
+    min-height: 100vh;
+    color: #88869D;
+}
+
+.summaryPanel .temperature{
+    font-size: 144px;
+    color: #E7E7EB;
+}
+small{
+    font-size: 48px;
+    color: #88869D;
+}
+.weatherLabel {
+    font-size: 36px;
+}
