@@ -2,6 +2,7 @@ import './Summary.css'
 import imageSunny from './Clear.png'
 
 
+
 export const Summary = ({temperature, date, location, weatherLabel}) => {
     return (
         <div className='summaryPanel'>

@@ -10,7 +10,14 @@
     color: #88869D;
     padding-top: 80px;
     padding-bottom: 80px;
+    background-image: url("Cloud-background.png");
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-size: contain;
+
 }
+
+
 
 .summaryPanel .temperature{
     font-size: 144px;
@@ -26,3 +33,4 @@ small{
 .summaryPanel img {
     width: 150px;
 }
+
