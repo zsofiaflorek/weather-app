@@ -1,6 +1,7 @@
 import { Summary } from "./Summary";
 import { DailyWeatherCard } from "./DailyWeatherCard";
 
+
 export const WeatherDisplay = ({ weather }) => {
     const currentWeather = weather.consolidated_weather[0];
     return (
@@ -18,6 +19,8 @@ export const WeatherDisplay = ({ weather }) => {
                             key={consolidatedWeatherElement.id}
                             date={consolidatedWeatherElement.applicable_date}
                             minTemperature={consolidatedWeatherElement.min_temp}
+                            maxTemperature={consolidatedWeatherElement.max_temp}
+                            weatherLabel={consolidatedWeatherElement.weather_state_name}
                         />
                     )
                 )}

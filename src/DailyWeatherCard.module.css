@@ -1,0 +1,22 @@
+.weatherCard {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border: 1px solid black;
+    background-color: #1E213A;
+    color: #E7E7EB ;
+
+
+}
+.maxTemperature {
+    color: #A09FB1;
+}
+
+.date {
+    margin-bottom: 20px;
+}
+.temperatures {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px 0 40px;
+
+}
