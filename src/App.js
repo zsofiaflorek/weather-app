@@ -1,10 +1,10 @@
-import './App.css';
-import { Weather } from './Weather.js';
+import "./App.css";
+import { Weather } from "./Weather.js";
 
 export function App() {
-  return (
-    <div className="App">
-      <Weather />
-    </div>
-  );
+    return (
+        <div className="App">
+            <Weather />
+        </div>
+    );
 }
