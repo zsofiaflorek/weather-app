@@ -13,5 +13,4 @@ export const Summary = ({temperature, date, location, weatherLabel}) => {
             <div><i className="fas fa-map-marker-alt"/> {location}</div>
         </div>
     )
-
 }
