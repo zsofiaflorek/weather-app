@@ -6,7 +6,7 @@ export const Weather = () => {
 
     useEffect(() => {
         fetch(
-            "https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/615702"
+            "https://metaweatherproxy.azurewebsites.net/api/location/615702"
         )
             .then((response) => {
                 /*console.log(response);*/
