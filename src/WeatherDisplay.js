@@ -13,7 +13,7 @@ export const WeatherDisplay = ({ weather }) => {
                 weatherLabel={currentWeather.weather_state_name}
             />
             <div>
-                {weather.consolidated_weather.map(
+                {weather.consolidated_weather.slice(1).map(
                     (consolidatedWeatherElement) => (
                         <DailyWeatherCard
                             key={consolidatedWeatherElement.id}
