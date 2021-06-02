@@ -6,10 +6,10 @@ export const DailyWeatherCard = ({
     maxTemperature,
     weatherLabel,
 }) => {
-    const year = date.slice(0, 4);
-    const month = date.slice(5, 7);
-    const day = date.slice(8, 10);
-    const parsedDate = new Date(year, month, day);
+    const year = Number(date.slice(0, 4));
+    const month = Number(date.slice(5, 7));
+    const day = Number(date.slice(8, 10));
+    const parsedDate = new Date(year, month-1, day);
     return (
         <div className={styles.weatherCard}>
             <div className={styles.date}>
