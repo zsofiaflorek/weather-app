@@ -40,36 +40,19 @@ export const DailyWeatherCard = ({
     );
 };
 
-function getIconForWeatherLabel(weatherLabel) {
-    //return icon;
-    if (weatherLabel === 'Showers'){
-        return showerIcon;
-    }
-    if (weatherLabel === 'LightRain'){
-        return lightRainIcon;
-    }
-    if (weatherLabel === 'Sleet'){
-        return sleetIcon;
-    }
-    if (weatherLabel === 'Snow'){
-        return snowIcon;
-    }
-    if (weatherLabel === 'Thunderstorm'){
-        return thunderstormIcon;
-    }
-    if (weatherLabel === 'LightCloud'){
-        return lightCloudIcon;
-    }
-    if (weatherLabel === 'HeavyRain'){
-        return heavyRainIcon;
-    }
-    if (weatherLabel === 'Hail'){
-        return hailIcon;
-    }
-    if (weatherLabel === 'Clear'){
-        return clearIcon;
-    }
-    return heavyCloudIcon;
+const iconForLabel = {
+    'Showers': showerIcon,
+    'LightRain': lightRainIcon,
+    'Sleet': sleetIcon,
+    'Snow': snowIcon,
+    'Thunderstorm': thunderstormIcon,
+    'LightCloud': lightCloudIcon,
+    'HeavyRain':heavyRainIcon,
+    'Hail': hailIcon,
+    'Clear': clearIcon
+}
 
+function getIconForWeatherLabel(weatherLabel) {
+    return iconForLabel[weatherLabel] ?? heavyCloudIcon;
 }
 
