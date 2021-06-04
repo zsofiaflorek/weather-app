@@ -1,10 +1,10 @@
 .weatherCard {
+    width: 135px;
     padding: 20px 20px 20px 20px;
-    margin: 15px;
+    margin: 10px;
     border: 1px solid black;
     background-color: #1E213A;
-    color: #E7E7EB ;
-    width: 130px;
+    color: #E7E7EB;
     font-size: 16px;
 
 
@@ -20,4 +20,17 @@
 .temperatures {
     display: flex;
     justify-content: space-between;
+}
+
+.weatherLabel{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 65px;
+    margin-bottom: 10px;
+}
+
+
+.weatherLabel img{
+    width: 54px;
 }
