@@ -1,5 +1,6 @@
 import { Summary } from "./Summary";
 import { DailyWeatherCard } from "./DailyWeatherCard";
+import styles from "./WeatherDisplay.module.css"
 
 
 export const WeatherDisplay = ({ weather }) => {
@@ -12,7 +13,7 @@ export const WeatherDisplay = ({ weather }) => {
                 location={weather.title}
                 weatherLabel={currentWeather.weather_state_name}
             />
-            <div>
+            <div className={styles.forecastPanel}>
                 {weather.consolidated_weather.slice(1).map(
                     (consolidatedWeatherElement) => (
                         <DailyWeatherCard
