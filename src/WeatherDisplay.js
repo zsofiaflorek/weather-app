@@ -4,21 +4,21 @@ import { ForecastPanel } from "./ForecastPanel";
 import { HighlightCard } from "./HighlightCard";
 import styles from "./WeatherDisplay.module.css";
 import { HighlightCardPanel } from "./HighlightCardPanel";
-import {UnitButton} from "./UnitButton";
+import {UnitButtons} from "./UnitButtons";
 
 export const WeatherDisplay = ({ weather }) => {
     const currentWeather = weather.consolidated_weather[0];
     return (
         <div>
-            <Summary
-                date={currentWeather.applicable_date}
-                temperature={currentWeather.the_temp}
-                location={weather.title}
-                weatherLabel={currentWeather.weather_state_name}
-            />
-            <UnitButton>
-
-            </UnitButton>
+            <div className={styles.summaryPanel}>
+                <Summary
+                    date={currentWeather.applicable_date}
+                    temperature={currentWeather.the_temp}
+                    location={weather.title}
+                    weatherLabel={currentWeather.weather_state_name}
+                />
+                <UnitButtons containerClassName={styles.unitButtons}/>
+            </div>
             <ForecastPanel>
                 {weather.consolidated_weather
                     .slice(1)
