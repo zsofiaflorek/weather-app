@@ -4,9 +4,11 @@ import { ForecastPanel } from "./ForecastPanel";
 import { HighlightCard } from "./HighlightCard";
 import styles from "./WeatherDisplay.module.css";
 import { HighlightCardPanel } from "./HighlightCardPanel";
-import {UnitButtons} from "./UnitButtons";
+import { UnitButtons } from "./UnitButtons";
+import { useState } from "react";
 
 export const WeatherDisplay = ({ weather }) => {
+    const [unit, setUnit] = useState("celsius");
     const currentWeather = weather.consolidated_weather[0];
     return (
         <div>
@@ -17,7 +19,13 @@ export const WeatherDisplay = ({ weather }) => {
                     location={weather.title}
                     weatherLabel={currentWeather.weather_state_name}
                 />
-                <UnitButtons containerClassName={styles.unitButtons}/>
+                <UnitButtons
+                    containerClassName={styles.unitButtons}
+                    unit={unit}
+                    onUnitChange={(newValue) => {
+                        setUnit(newValue);
+                    }}
+                />
             </div>
             <ForecastPanel>
                 {weather.consolidated_weather

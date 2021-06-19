@@ -1,9 +1,7 @@
 import styles from "./UnitButtons.module.css";
-import { useState } from "react";
 import classNames from "classnames";
 
-export function UnitButtons({ containerClassName }) {
-    const [unit, setUnit] = useState("celsius");
+export function UnitButtons({ containerClassName, unit, onUnitChange }) {
     return (
         <div className={containerClassName}>
             <button
@@ -11,7 +9,7 @@ export function UnitButtons({ containerClassName }) {
                     [styles.active]: unit === "celsius",
                 })}
                 onClick={() => {
-                    setUnit("celsius");
+                    onUnitChange("celsius");
                 }}
             >
                 °C
@@ -21,7 +19,7 @@ export function UnitButtons({ containerClassName }) {
                     [styles.active]: unit === "fahrenheit",
                 })}
                 onClick={() => {
-                    setUnit("fahrenheit");
+                    onUnitChange("fahrenheit");
                 }}
             >
                 °F
