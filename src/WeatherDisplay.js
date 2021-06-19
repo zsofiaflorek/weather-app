@@ -18,6 +18,7 @@ export const WeatherDisplay = ({ weather }) => {
                     temperature={currentWeather.the_temp}
                     location={weather.title}
                     weatherLabel={currentWeather.weather_state_name}
+                    unit={unit}
                 />
                 <UnitButtons
                     containerClassName={styles.unitButtons}
