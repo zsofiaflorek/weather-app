@@ -1,0 +1,15 @@
+.unitButton{
+    height: 50px;
+    width: 50px;
+    border-radius: 80%;
+    background-color: #100E1D;
+    border: none;
+    color: #E7E7EB;
+    font-size: 20px;
+    margin: 0 15px 0 0;
+
+}
+.active {
+    background-color: white;
+    color: black;
+}
