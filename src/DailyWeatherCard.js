@@ -42,12 +42,12 @@ export const DailyWeatherCard = ({
 
 const iconForLabel = {
     'Showers': showerIcon,
-    'LightRain': lightRainIcon,
+    'Light Rain': lightRainIcon,
     'Sleet': sleetIcon,
     'Snow': snowIcon,
     'Thunderstorm': thunderstormIcon,
-    'LightCloud': lightCloudIcon,
-    'HeavyRain':heavyRainIcon,
+    'Light Cloud': lightCloudIcon,
+    'Heavy Rain':heavyRainIcon,
     'Hail': hailIcon,
     'Clear': clearIcon
 }
