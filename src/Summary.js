@@ -1,6 +1,7 @@
 import "./Summary.css";
 import imageSunny from "./Clear.png";
-import {calculateTemperature} from "./utils/temperature"
+import {calculateTemperature, formatUnit} from "./utils/temperature"
+
 
 export const Summary = ({
     temperature,
@@ -14,7 +15,7 @@ export const Summary = ({
             <img src={imageSunny} alt="Weather icon" />
             <div className="temperature">
                 {calculateTemperature(unit, temperature)}
-                <small>{unit === "celsius" ? "°C" : "°F"}</small>
+                <small>{formatUnit(unit)}</small>
             </div>
             <div className="weatherLabel">{weatherLabel}</div>
             <div>Today • {date}</div>

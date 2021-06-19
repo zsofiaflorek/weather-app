@@ -5,3 +5,7 @@ export function calculateTemperature(unit, temperatureInCelsius) {
         return Math.round(temperatureInCelsius * 1.8 + 32);
     }
 }
+
+export function formatUnit(unit) {
+    return unit === "celsius" ? "°C" : "°F";
+}

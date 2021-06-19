@@ -40,6 +40,7 @@ export const WeatherDisplay = ({ weather }) => {
                             weatherLabel={
                                 consolidatedWeatherElement.weather_state_name
                             }
+                            unit={unit}
                         />
                     ))}
             </ForecastPanel>
