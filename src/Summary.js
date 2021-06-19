@@ -1,5 +1,6 @@
 import "./Summary.css";
 import imageSunny from "./Clear.png";
+import {calculateTemperature} from "./utils/temperature"
 
 export const Summary = ({
     temperature,
@@ -23,11 +24,3 @@ export const Summary = ({
         </div>
     );
 };
-
-function calculateTemperature(unit, temperatureInCelsius) {
-    if (unit === "celsius") {
-        return Math.round(temperatureInCelsius);
-    } else {
-        return Math.round(temperatureInCelsius * 1.8 + 32);
-    }
-}
