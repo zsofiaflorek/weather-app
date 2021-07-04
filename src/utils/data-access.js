@@ -25,3 +25,28 @@ export function useWeatherForecast(locationId) {
 
     return { data };
 }
+
+export function useLocationSearch(search) {
+    const [data, setData] = useState(undefined);
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState(undefined);
+
+    useEffect(() => {
+        setIsLoading(true);
+        fetch(
+            `https://metaweatherproxy.azurewebsites.net/api/location/search/?query=${search}`
+        )
+            .then((response) => response.json())
+            .then((result) => {
+                setData(result);
+            })
+            .catch((error) => {
+                setError(error);
+            })
+            .finally(() => {
+                setIsLoading(false);
+            });
+    }, [search]);
+
+    return { searchResult: data, isLoading, error };
+}
