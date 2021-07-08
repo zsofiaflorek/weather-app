@@ -1,7 +1,6 @@
 import "./Summary.css";
-import imageSunny from "./Clear.png";
-import {calculateTemperature, formatUnit} from "./utils/temperature"
-
+import { calculateTemperature, formatUnit } from "./utils/temperature";
+import { getIconForWeatherLabel } from "./utils/icons";
 
 export const Summary = ({
     temperature,
@@ -12,7 +11,10 @@ export const Summary = ({
 }) => {
     return (
         <div className="summaryPanel">
-            <img src={imageSunny} alt="Weather icon" />
+            <img
+                src={getIconForWeatherLabel(weatherLabel)}
+                alt="Weather icon"
+            />
             <div className="temperature">
                 {calculateTemperature(unit, temperature)}
                 <small>{formatUnit(unit)}</small>

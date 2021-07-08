@@ -1,15 +1,6 @@
 import styles from "./DailyWeatherCard.module.css";
-import hailIcon from "./Hail.png";
-import heavyCloudIcon from "./HeavyCloud.png";
-import clearIcon from "./Clear.png";
-import heavyRainIcon from "./HeavyRain.png";
-import lightCloudIcon from "./LightCloud.png";
-import lightRainIcon from "./LightRain.png";
-import showerIcon from "./Shower.png";
-import sleetIcon from "./Sleet.png";
-import snowIcon from "./Snow.png";
-import thunderstormIcon from "./Thunderstorm.png";
 import { calculateTemperature, formatUnit } from "./utils/temperature";
+import { getIconForWeatherLabel } from "./utils/icons";
 
 export const DailyWeatherCard = ({
     date,
@@ -50,19 +41,3 @@ export const DailyWeatherCard = ({
         </div>
     );
 };
-
-const iconForLabel = {
-    Showers: showerIcon,
-    "Light Rain": lightRainIcon,
-    Sleet: sleetIcon,
-    Snow: snowIcon,
-    Thunderstorm: thunderstormIcon,
-    "Light Cloud": lightCloudIcon,
-    "Heavy Rain": heavyRainIcon,
-    Hail: hailIcon,
-    Clear: clearIcon,
-};
-
-function getIconForWeatherLabel(weatherLabel) {
-    return iconForLabel[weatherLabel] ?? heavyCloudIcon;
-}
