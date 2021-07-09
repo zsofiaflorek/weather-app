@@ -6,14 +6,16 @@ import styles from "./LocationCard.module.css";
 export const SearchPage = () => {
     const [search, setSearch] = useState("");
     const { searchResult } = useLocationSearch(search);
-    let history = useHistory();
-    function handleClick() {
-        history.goBack();
-    }
+    const history = useHistory();
     return (
         <div className={styles.locationDisplay}>
             {history.action === "PUSH" ? (
-                <i className="fas fa-times" onClick={handleClick} />
+                <i
+                    className="fas fa-times"
+                    onClick={() => {
+                        history.goBack();
+                    }}
+                />
             ) : null}
             <input
                 type="text"
