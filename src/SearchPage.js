@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { useLocationSearch } from "./utils/data-access";
-import styles from "./LocationCard.module.css";
+import styles from "./SearchPage.module.css";
 
 export const SearchPage = () => {
     const [search, setSearch] = useState("");
@@ -19,7 +19,7 @@ export const SearchPage = () => {
             ) : null}
             <input
                 type="text"
-                placeholder="search location"
+                placeholder="Search Location"
                 value={search}
                 onChange={(e) => {
                     setSearch(e.currentTarget.value);
