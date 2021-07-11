@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
+import useSWR from "swr";
 
+const fetcher = (...args) => fetch(...args).then((res) => res.json());
 export function useWeatherForecast(locationId) {
     const [data, setData] = useState(undefined);
 
@@ -27,38 +29,11 @@ export function useWeatherForecast(locationId) {
 }
 
 export function useLocationSearch(search) {
-    const [data, setData] = useState(undefined);
-    const [isLoading, setIsLoading] = useState(false);
-    const [error, setError] = useState(undefined);
-
-    useEffect(() => {
-        setIsLoading(true);
-        let isActive = true;
-
-        fetch(
-            `https://metaweatherproxy.azurewebsites.net/api/location/search/?query=${search}`
-        )
-            .then((response) => response.json())
-            .then((result) => {
-                if (isActive) {
-                    setData(result);
-                }
-            })
-            .catch((error) => {
-                if (isActive) {
-                    setError(error);
-                }
-            })
-            .finally(() => {
-                if (isActive) {
-                    setIsLoading(false);
-                }
-            });
-
-        return () => {
-            isActive = false;
-        };
-    }, [search]);
-
-    return { searchResult: data, isLoading, error };
+    const { data, error } = useSWR(
+        search
+            ? `https://metaweatherproxy.azurewebsites.net/api/location/search/?query=${search}`
+            : null,
+        fetcher
+    );
+    return { searchResult: data, isLoading: !error && !data, error };
 }
