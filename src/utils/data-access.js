@@ -33,19 +33,31 @@ export function useLocationSearch(search) {
 
     useEffect(() => {
         setIsLoading(true);
+        let isActive = true;
+
         fetch(
             `https://metaweatherproxy.azurewebsites.net/api/location/search/?query=${search}`
         )
             .then((response) => response.json())
             .then((result) => {
-                setData(result);
+                if (isActive) {
+                    setData(result);
+                }
             })
             .catch((error) => {
-                setError(error);
+                if (isActive) {
+                    setError(error);
+                }
             })
             .finally(() => {
-                setIsLoading(false);
+                if (isActive) {
+                    setIsLoading(false);
+                }
             });
+
+        return () => {
+            isActive = false;
+        };
     }, [search]);
 
     return { searchResult: data, isLoading, error };
