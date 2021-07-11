@@ -1,10 +1,14 @@
 import { WeatherDisplay } from "./WeatherDisplay";
 import { useWeatherForecast } from "./utils/data-access";
+import {useParams} from "react-router-dom"
 
 export const Weather = () => {
-    const { data } = useWeatherForecast("615702");
+    const {locationId} = useParams();
+    const { data } = useWeatherForecast(locationId);
     if (data === undefined) {
-        return <div>Loading</div>;
+        return(
+          <div>Loading</div>
+        )
     }
     return <WeatherDisplay weather={data} />;
 };

@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
+import useSWR from "swr";
 
+const fetcher = (...args) => fetch(...args).then((res) => res.json());
 export function useWeatherForecast(locationId) {
     const [data, setData] = useState(undefined);
 
@@ -24,4 +26,14 @@ export function useWeatherForecast(locationId) {
     }, [locationId]);
 
     return { data };
+}
+
+export function useLocationSearch(search) {
+    const { data, error } = useSWR(
+        search
+            ? `https://metaweatherproxy.azurewebsites.net/api/location/search/?query=${search}`
+            : null,
+        fetcher
+    );
+    return { searchResult: data, isLoading: !error && !data, error };
 }

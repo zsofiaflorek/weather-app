@@ -1,0 +1,49 @@
+.locationDisplay {
+    background-color: #1e213a;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.locationDisplay i {
+    color: #e7e7eb;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 20px 10px 10px;
+    align-self: flex-end;
+}
+.locationDisplay input {
+    margin: 10px 10px;
+    padding: 0 25px;
+    width: 250px;
+    height: 45px;
+    background-color: transparent;
+    box-sizing: border-box;
+    border: 1px solid #e7e7eb;
+    color: #e7e7eb;
+}
+
+.locationListItem {
+    list-style: none;
+}
+.locationResult {
+    display: block;
+    text-decoration: none;
+    color: #e7e7eb;
+    font-family: "Raleway", "sans-serif";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 20px;
+    border: 1px solid transparent;
+}
+
+.locationResult:hover {
+    border: 1px solid #e7e7eb;
+}
+
+.locationList {
+    padding-left: 0;
+}
