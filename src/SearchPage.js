@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { useLocationSearch } from "./utils/data-access";
 import styles from "./SearchPage.module.css";
+import { useDebounce } from "use-debounce";
 
 export const SearchPage = () => {
     const [search, setSearch] = useState("");
-    const { searchResult } = useLocationSearch(search);
+    const [debouncedSearch] = useDebounce(search, 500);
+    const { searchResult } = useLocationSearch(debouncedSearch);
     const history = useHistory();
+
     return (
         <div className={styles.locationDisplay}>
             {history.action === "PUSH" ? (
