@@ -3,6 +3,7 @@ import { Link, useHistory } from "react-router-dom";
 import { useLocationSearch } from "./utils/data-access";
 import styles from "./SearchPage.module.css";
 import { useDebounce } from "use-debounce";
+import icon from "./utils/icons/SearchPageIcon.png";
 
 export const SearchPage = () => {
     const [search, setSearch] = useState("");
@@ -20,6 +21,9 @@ export const SearchPage = () => {
                     }}
                 />
             ) : null}
+            <img src={icon} alt="Weather app icon" />
+            <div className={styles.title}>Weather App</div>
+            <div className={styles.text}>Please choose your current city</div>
             <input
                 type="text"
                 placeholder="Search Location"
