@@ -30,11 +30,11 @@ export const DailyWeatherCard = ({
             </div>
             <div className={styles.temperatures}>
                 <span>
-                    {calculateTemperature(unit, minTemperature)}
+                    {calculateTemperature(unit, maxTemperature)}
                     {formatUnit(unit)}
                 </span>
-                <span className={styles.maxTemperature}>
-                    {calculateTemperature(unit, maxTemperature)}
+                <span className={styles.minTemperature}>
+                    {calculateTemperature(unit, minTemperature)}
                     {formatUnit(unit)}
                 </span>
             </div>

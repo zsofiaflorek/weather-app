@@ -3,15 +3,12 @@
     padding: 20px 20px 20px 20px;
     margin: 10px;
     border: 1px solid black;
-    background-color: #1E213A;
-    color: #E7E7EB;
+    background-color: #1e213a;
+    color: #e7e7eb;
     font-size: 16px;
-
-
-
 }
-.maxTemperature {
-    color: #A09FB1;
+.minTemperature {
+    color: #a09fb1;
 }
 
 .date {
@@ -22,7 +19,7 @@
     justify-content: space-between;
 }
 
-.weatherLabel{
+.weatherLabel {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -30,7 +27,6 @@
     margin-bottom: 10px;
 }
 
-
-.weatherLabel img{
+.weatherLabel img {
     width: 54px;
 }
