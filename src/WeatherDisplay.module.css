@@ -12,20 +12,33 @@
     font-weight: 700;
 }
 
-.summaryPanel{
+.summaryPanel {
     background-color: #61dafb;
     position: relative;
 }
 
-.unitButtons{
+.unitButtons {
     position: absolute;
     top: 20px;
     right: 20px;
 }
 
-
-.locationButton{
+.locationButton {
     position: absolute;
     top: 20px;
     left: 20px;
+}
+
+@media only screen and (min-width: 992px) {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        max-height: 100vh;
+    }
+    .container > :first-child {
+        flex-grow: 1;
+    }
+    .container > :last-child {
+        flex-grow: 2;
+    }
 }

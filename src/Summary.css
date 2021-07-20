@@ -8,8 +8,7 @@
     width: 100%;
     min-height: 100vh;
     color: #88869D;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding: 80px 40px;
     background-image: url("./Cloud-background_blue.png");
     background-repeat: no-repeat;
     background-attachment: local;
