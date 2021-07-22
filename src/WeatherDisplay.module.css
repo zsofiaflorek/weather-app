@@ -28,6 +28,12 @@
     top: 20px;
     left: 20px;
 }
+.innerContainer{
+    padding: 40px 35px;
+}
+.innerContainer > :first-child{
+    margin: 0 -10px;
+}
 
 @media only screen and (min-width: 992px) {
     .container {
@@ -41,5 +47,11 @@
     .container > :last-child {
         flex-grow: 2;
     }
+    .innerContainer{
+        max-width: 90%;
+        margin: auto;
+    }
+
+
 
 }

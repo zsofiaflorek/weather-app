@@ -31,65 +31,67 @@ export const WeatherDisplay = ({ weather }) => {
                 />
             </div>
             <div>
-                <ForecastPanel>
-                    {weather.consolidated_weather
-                        .slice(1)
-                        .map((consolidatedWeatherElement) => (
+                <div className={styles.innerContainer}>
+                    <ForecastPanel>
+                        {weather.consolidated_weather
+                          .slice(1)
+                          .map((consolidatedWeatherElement) => (
                             <DailyWeatherCard
-                                key={consolidatedWeatherElement.id}
-                                date={
-                                    consolidatedWeatherElement.applicable_date
-                                }
-                                minTemperature={
-                                    consolidatedWeatherElement.min_temp
-                                }
-                                maxTemperature={
-                                    consolidatedWeatherElement.max_temp
-                                }
-                                weatherLabel={
-                                    consolidatedWeatherElement.weather_state_name
-                                }
-                                unit={unit}
+                              key={consolidatedWeatherElement.id}
+                              date={
+                                  consolidatedWeatherElement.applicable_date
+                              }
+                              minTemperature={
+                                  consolidatedWeatherElement.min_temp
+                              }
+                              maxTemperature={
+                                  consolidatedWeatherElement.max_temp
+                              }
+                              weatherLabel={
+                                  consolidatedWeatherElement.weather_state_name
+                              }
+                              unit={unit}
                             />
-                        ))}
-                </ForecastPanel>
-                <HighlightCardPanel>
-                    <HighlightCard title="Wind status">
-                        <div className={styles.unit}>
+                          ))}
+                    </ForecastPanel>
+                    <HighlightCardPanel>
+                        <HighlightCard title="Wind status">
+                            <div className={styles.unit}>
                             <span className={styles.measurements}>
                                 {Math.floor(currentWeather.wind_speed)}
                             </span>{" "}
-                            mph
-                        </div>
-                        <div>
-                            <span>WSW</span>
-                        </div>
-                    </HighlightCard>
-                    <HighlightCard title="Humidity">
-                        <div className={styles.unit}>
+                                mph
+                            </div>
+                            <div>
+                                <span>WSW</span>
+                            </div>
+                        </HighlightCard>
+                        <HighlightCard title="Humidity">
+                            <div className={styles.unit}>
                             <span className={styles.measurements}>
                                 {currentWeather.humidity}
                             </span>{" "}
-                            %
-                        </div>
-                    </HighlightCard>
-                    <HighlightCard title="Visibility">
-                        <div className={styles.unit}>
+                                %
+                            </div>
+                        </HighlightCard>
+                        <HighlightCard title="Visibility">
+                            <div className={styles.unit}>
                             <span className={styles.measurements}>
                                 {Math.round(currentWeather.visibility)}
                             </span>{" "}
-                            miles
-                        </div>
-                    </HighlightCard>
-                    <HighlightCard title="Air Pressure">
-                        <div className={styles.unit}>
+                                miles
+                            </div>
+                        </HighlightCard>
+                        <HighlightCard title="Air Pressure">
+                            <div className={styles.unit}>
                             <span className={styles.measurements}>
                                 {Math.floor(currentWeather.air_pressure)}
                             </span>{" "}
-                            mb
-                        </div>
-                    </HighlightCard>
-                </HighlightCardPanel>
+                                mb
+                            </div>
+                        </HighlightCard>
+                    </HighlightCardPanel>
+                </div>
             </div>
         </div>
     );
