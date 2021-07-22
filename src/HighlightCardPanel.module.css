@@ -6,3 +6,11 @@
     text-align: left;
     color: white;
 }
+
+@media only screen and (min-width: 992px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: -20px;
+    }
+}
