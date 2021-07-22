@@ -1,8 +1,16 @@
-.HighlightCardPanel {
-    padding: 0 30px 0 30px;
-}
 .title {
     font-size: 24px;
     text-align: left;
     color: white;
+    margin: 60px 0 45px 0;
+}
+.grid{
+    margin: -20px;
+}
+
+@media only screen and (min-width: 992px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
