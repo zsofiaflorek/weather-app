@@ -1,13 +1,10 @@
-.Button {
-}
-
-.Link{
-    background-color: #6E707A;
+.Link {
+    background-color: #6e707a;
     font-style: normal;
-    font-family: 'Raleway', 'sans-serif';
+    font-family: "Raleway", "sans-serif";
     font-size: 18px;
     line-height: 45px;
-    color:#E7E7EB ;
+    color: #e7e7eb;
     box-sizing: border-box;
     height: 45px;
     padding: 0 20px;
