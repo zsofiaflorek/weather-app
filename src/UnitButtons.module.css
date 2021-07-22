@@ -1,14 +1,14 @@
-.unitButton{
+.unitButton {
     height: 45px;
     width: 45px;
     border-radius: 80%;
-    background-color: #100E1D;
+    background-color: #100e1d;
     border: none;
-    color: #E7E7EB;
+    color: #e7e7eb;
     font-size: 18px;
     margin-right: 15px;
 }
-.unitButton:last-child{
+.unitButton:last-child {
     margin-right: 0;
 }
 

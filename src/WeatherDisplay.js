@@ -6,7 +6,7 @@ import styles from "./WeatherDisplay.module.css";
 import { HighlightCardPanel } from "./HighlightCardPanel";
 import { UnitButtons } from "./UnitButtons";
 import { useState } from "react";
-import {LocationSearchButton} from "./Location"
+import { LocationSearchButton } from "./Location";
 
 export const WeatherDisplay = ({ weather }) => {
     const [unit, setUnit] = useState("celsius");
@@ -21,7 +21,7 @@ export const WeatherDisplay = ({ weather }) => {
                     weatherLabel={currentWeather.weather_state_name}
                     unit={unit}
                 />
-                <LocationSearchButton className={styles.locationButton}/>
+                <LocationSearchButton className={styles.locationButton} />
                 <UnitButtons
                     containerClassName={styles.unitButtons}
                     unit={unit}

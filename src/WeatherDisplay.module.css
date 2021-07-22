@@ -12,19 +12,18 @@
     font-weight: 700;
 }
 
-.summaryPanel{
+.summaryPanel {
     background-color: #61dafb;
     position: relative;
 }
 
-.unitButtons{
+.unitButtons {
     position: absolute;
     top: 20px;
     right: 20px;
 }
 
-
-.locationButton{
+.locationButton {
     position: absolute;
     top: 20px;
     left: 20px;
