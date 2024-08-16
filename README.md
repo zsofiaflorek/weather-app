@@ -1,5 +1,6 @@
 ![GitHub](https://img.shields.io/github/license/zsofiaflorek/weather-app?style=plastic)
 ![create-react-app supported](https://img.shields.io/badge/CRA-supported-green.svg?style=plastic)
+![dog image](https://www.google.com/imgres?q=dog%20image&imgurl=https%3A%2F%2Fimages.rawpixel.com%2Fimage_png_800%2FczNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvcHUyMzMxNzg4LWltYWdlLXJtNTAzLTAxXzEtbDBqOXFyYzMucG5n.png&imgrefurl=https%3A%2F%2Fwww.rawpixel.com%2Fsearch%2Fdog&docid=bZ6uIi8xTIShCM&tbnid=Gl287EJsKZnMRM&vet=12ahUKEwj86p276PiHAxXCh_0HHf37CCMQM3oECH4QAA..i&w=800&h=1200&hcb=2&ved=2ahUKEwj86p276PiHAxXCh_0HHf37CCMQM3oECH4QAA)
 
 # Weather forecast app 🌞
 
