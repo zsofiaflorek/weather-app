@@ -1,7 +1,6 @@
 ![GitHub](https://img.shields.io/github/license/zsofiaflorek/weather-app?style=plastic)
 ![create-react-app supported](https://img.shields.io/badge/CRA-supported-green.svg?style=plastic)
 
-![](https://t3.ftcdn.net/jpg/08/92/32/58/360_F_892325834_jOMihZEjdJDbGWQohTSh0QpQxDD70RkB.webp)
 
 # Weather forecast app 🌞
 
